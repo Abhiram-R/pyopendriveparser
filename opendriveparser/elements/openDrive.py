@@ -31,7 +31,14 @@ class OpenDrive(object):
     @property
     def junctions(self):
         return self._junctions
-
+    
+    def getJunction(self, id):
+        for junction in self._junctions:
+            if junction.id == id:
+                return junction
+        
+        return None
+    
     @property
     def junctionGroups(self):
         return self._junctionGroups
